@@ -5,11 +5,11 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description="Reverse Shell Client")
-    parser.add_argument("--my-ip", type=str, required=True, help="The IP address of the listening server")
+    parser.add_argument("--server-ip", type=str, required=True, help="The IP address of the listening server")
     parser.add_argument("--port", type=int, default=9999, help="The port to connect to")
     args = parser.parse_args()
 
-    HOST = args.my_ip  # The IP address of the listening server
+    HOST = args.server_ip  # The IP address of the listening server
     PORT = args.port    # The port to connect to
 
     s = socket.socket()
